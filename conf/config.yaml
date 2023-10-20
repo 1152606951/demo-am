@@ -8,4 +8,4 @@ test:
   account:
     pwd: aomaker
     user: aomaker
-  host: http://60.216.39.184:7777
+  host: http://60.216.39.184:8000
