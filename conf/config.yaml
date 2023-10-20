@@ -1,0 +1,11 @@
+env: test
+release:
+  account:
+    pwd: tester
+    user: tester
+  host: https://api.pity.fun
+test:
+  account:
+    pwd: aomaker
+    user: aomaker
+  host: http://60.216.39.184:7777

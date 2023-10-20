@@ -1,0 +1,12 @@
+case:
+  crate_case:
+    - name: "用例1"
+    - name: "用例2"
+    - name: "用例3"
+    - name: "用例4"
+    - name: "用例5"
+    - name: "用例6"
+    - name: "用例7"
+    - name: "用例8"
+    - name: "用例9"
+    - name: "用例10"
