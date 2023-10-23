@@ -9,7 +9,7 @@ class Case(MyBaseApi):
     @aomaker.dependence(project_obj.get_projects, "project_info")
     def get_directory(self):
         """获取测试目录"""
-        project_id = self.cache.get_by_jsonpath("project_info", jsonpath_expr="$..[?(@.name=='listen1234')].id")
+        project_id = self.cache.get_by_jsonpath("project_info", jsonpath_expr="$..[?(@.name=='aomaker-test')].id")
         http_data = {
             'api_path': '/testcase/directory',
             'method': 'get',
@@ -23,7 +23,7 @@ class Case(MyBaseApi):
     @aomaker.dependence(project_obj.get_projects, "project_info")
     def create_directory(self):
         """新建目录"""
-        project_id = self.cache.get_by_jsonpath("project_info", jsonpath_expr="$..[?(@.name=='listen1234')].id")
+        project_id = self.cache.get_by_jsonpath("project_info", jsonpath_expr="$..[?(@.name=='aomaker-test')].id")
         http_data = {
             'api_path': '/testcase/directory/insert',
             'method': 'post',

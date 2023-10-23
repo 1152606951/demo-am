@@ -24,7 +24,7 @@ class Plan(MyBaseApi):
     @aomaker.dependence(case_obj.get_testcases, "case_info")
     def create_plan(self, plan_name: str = None, **kwargs):
         """新建测试计划"""
-        project_id = self.cache.get_by_jsonpath("project_info", jsonpath_expr="$..[?(@.name=='listen1234')].id")
+        project_id = self.cache.get_by_jsonpath("project_info", jsonpath_expr="$..[?(@.name=='aomaker-test')].id")
         env_id = self.cache.get_by_jsonpath("env_info", jsonpath_expr="$..[?(@.name=='Test')].id")
         case_id_list = self.cache.get_by_jsonpath("case_info", jsonpath_expr="$..id", expr_index=None)
 
