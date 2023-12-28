@@ -20,12 +20,14 @@ class Project(MyBaseApi):
     @aomaker.dependence(user_obj.get_users, "user_info")
     def create_project(self):
         """新增项目"""
-        user_id = self.cache.get_by_jsonpath("user_info", jsonpath_expr="$..[?(@.name=='aomaker')].id")
+        user_id = self.cache.get_by_jsonpath("user_info", jsonpath_expr="$..[?(@.name=='tester')].id")
+        project_name = self.get_random_name("project")
+        self.cache.set("project_name", project_name)
         http_data = {
             'api_path': '/project/insert',
             'method': 'post',
             'json': {
-                "name": self.get_random_name("project"),
+                "name": project_name,
                 "app": "ad",
                 "owner": user_id,
                 "description": "a",

@@ -1,4 +1,4 @@
-env: test
+env: release
 release:
   account:
     pwd: tester

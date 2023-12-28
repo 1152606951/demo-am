@@ -44,4 +44,4 @@ from aomaker.runner import run, processes_run, threads_run
 from login import Login
 
 if __name__ == '__main__':
-    run(['-m demo'], login=Login())
+    run(['-m case'], login=Login())
